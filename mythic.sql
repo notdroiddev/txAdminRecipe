@@ -83,3 +83,10 @@ COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=16
 ;
+
+DROP TABLE IF EXISTS `sequence`;
+CREATE TABLE IF NOT EXISTS `sequence` (
+  `id` VARCHAR(64) NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
+  `sequence` BIGINT(20) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
